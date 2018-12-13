@@ -13,6 +13,15 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree .
 //= require jquery
 //= require twitter/bootstrap
+//= require_tree .
+
+var init_stock_lookup = function(){
+  $('#stock-lookup-form').on('ajax:success', function(event, data, status){
+    $('#results').html(data);
+  });
+};
+$(document).ready(function() {
+  init_stock_lookup();
+})
