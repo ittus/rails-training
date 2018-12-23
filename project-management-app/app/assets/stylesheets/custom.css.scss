@@ -5,7 +5,7 @@
   a {
     color: #fff !important;
     margin: 0 !important;
-    padding: 5px !important !important;
+    padding: 5px !important;
   }
 
   a:focus,
@@ -106,4 +106,17 @@
 
 .extra {
   color: #5cb85c;
+}
+
+.no-side-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.no-left-padding {
+  padding-left: 0 !important;
+}
+
+.no-right-padding {
+  padding-right: 0 !important;
 }
