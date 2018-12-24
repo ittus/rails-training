@@ -12,6 +12,7 @@ gem 'stripe'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'bootstrap-datepicker-rails'
+gem 'font-awesome-rails'
 gem 'jquery-rails'
 
 # Use sqlite3 as the database for Active Record
