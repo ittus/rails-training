@@ -12,4 +12,15 @@ RSpec.feature "User submits a link" do
     click_on "Submit!"
     expect(page).to have_link link_title, href: link_url
   end
+
+  context "the form is invalid" do
+    scenario "they see a useful error message" do
+      link_title = "This Testing Rails book is awesome!"
+      visit root_path
+
+      click_on "Submit a new link"
+      fill_in "link_title", with: link_title
+      click_on "Submit!"
+      expect(page).to have_content "Url can't be blank" end
+  end
 end
