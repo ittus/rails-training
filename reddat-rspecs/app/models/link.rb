@@ -1,4 +1,6 @@
 class Link < ApplicationRecord
+  IMAGE_FORMATS = %w(.jpg .gif .png)
+
   validates :title, presence: true
   validates :url, presence: true
 
@@ -17,6 +19,10 @@ class Link < ApplicationRecord
 
   def score
     upvotes - downvotes
+  end
+
+  def image?
+    url.end_with? *IMAGE_FORMATS
   end
 
 end
